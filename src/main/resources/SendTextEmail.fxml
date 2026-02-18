@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="Infinity" maxWidth="Infinity" spacing="20" style="-fx-background-color: #f0ebf1;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.email.EmailTextPage">
+
+                   <Label text="Text Email" underline="true">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Label>
+
+                <GridPane hgap="10" maxWidth="500" vgap="15">
+        <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS" />
+        </columnConstraints>
+
+                    <JFXTextField fx:id="emailFrom" focusColor="#0543ff" labelFloat="true" maxWidth="Infinity" onKeyPressed="#useEnter" promptText="Email From:" GridPane.rowIndex="0" />
+
+                    <JFXTextField fx:id="emailTo" labelFloat="true" maxWidth="Infinity" onKeyPressed="#useEnter" promptText="Email To:" GridPane.rowIndex="1" />
+   
+                    <JFXTextArea fx:id="messageText" maxWidth="Infinity" onKeyPressed="#useEnter" prefRowCount="4" promptText="Enter Message:" wrapText="true" GridPane.rowIndex="2" />
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+      <padding>
+         <Insets left="50.0" right="50.0" />
+      </padding>
+    </GridPane>
+
+    <Separator maxWidth="500" />
+
+    <HBox alignment="CENTER" prefHeight="52.0" prefWidth="500.0" spacing="20">
+        <JFXButton fx:id="sendBtn" onKeyPressed="#useEnter" prefWidth="100.0" style="-fx-background-color: blue;" text="Send" textFill="WHITE" />
+
+           <JFXButton fx:id="resetBtn" onAction="#resetAction" prefWidth="100.0" style="-fx-background-color: blue;" text="Reset" textFill="WHITE" />
+    </HBox>
+
+</VBox>

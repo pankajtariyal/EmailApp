@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane style="-fx-background-color: #f0ebf1;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.email.HomeMainPageController">
+   <top>
+      <HBox prefHeight="40.0" prefWidth="600.0" style="-fx-background-color: #975c9c;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXHamburger fx:id="menuToggle" prefHeight="40.0" prefWidth="149.0" style="-fx-text-fill: white;" />
+            <GridPane prefHeight="40.0" HBox.hgrow="ALWAYS">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="472.0" minWidth="10.0" prefWidth="472.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="267.0" minWidth="10.0" prefWidth="135.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <GridPane maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="165.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="49.0" minWidth="10.0" prefWidth="13.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="56.0" minWidth="10.0" prefWidth="56.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="77.0" minWidth="10.0" prefWidth="55.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <JFXButton fx:id="btnClose" minWidth="41.0" prefHeight="32.0" prefWidth="41.0" ripplerFill="RED" text=" " GridPane.columnIndex="2">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons8-close-30.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="minimizebtn" minWidth="39.0" prefHeight="32.0" prefWidth="39.0" ripplerFill="#bc5c5c" text=" " GridPane.columnIndex="1">
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons8-minimize-30.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+   <left>
+       <VBox fx:id="menuBar" prefWidth="200.0" spacing="6.0" style="-fx-background-color: #30287c;">
+         <children>
+            <JFXButton fx:id="textBtn" maxWidth="1.7976931348623157E308" onAction="#showTextPage" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: #6ab7d3;" text="Text" textFill="WHITE" />
+            <JFXButton fx:id="btnFile" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#showFilePage" style="-fx-background-color: #6ab7d3;" text="File" textFill="WHITE" />
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <StackPane fx:id="pane" maxHeight="Infinity" maxWidth="Infinity" prefHeight="600.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
