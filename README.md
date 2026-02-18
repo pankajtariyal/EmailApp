@@ -65,7 +65,7 @@ EmailApp
 
 # ⚙️ How To Run The Project
 Step 1️⃣ – Clone the repository
-- `git clone https://github.com/your-username/EmailApp.git`
+- git clone https://github.com/pankajtariyal/EmailApp.git
 - `cd EmailApp`
 
 Step 2️⃣ – Build using Maven
